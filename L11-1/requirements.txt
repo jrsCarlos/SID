@@ -1,0 +1,8 @@
+jupyter
+rlcard
+pettingzoo
+seaborn
+matplotlib
+numpy
+pandas
+pygame
