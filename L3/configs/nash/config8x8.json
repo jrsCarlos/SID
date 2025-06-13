@@ -1,0 +1,20 @@
+{
+    "size": 8,
+    "obstacle_density": 0.4,
+    "maps": 10,
+    "num_agents": 2,
+    "num_states": 16384,
+    "obs_radius": 3,
+
+    "epochs": 100,
+    "episodes_per_epoch": 10,
+    "episode_length": 64,
+
+    "learning_rate": 0.0001,
+    "gamma": 0.99,
+    "epsilon_max": 1,
+    "epsilon_min": 0.1,
+
+    "renders": "renders/",
+    "solution_concept": "Nash"
+}

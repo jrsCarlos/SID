@@ -2,8 +2,7 @@ import gymnasium
 import numpy as np
 from gymnasium.spaces import Discrete
 from pettingzoo import AECEnv
-from pettingzoo.utils import wrappers
-from pettingzoo.utils.agent_selector import agent_selector
+from pettingzoo.utils import agent_selector, wrappers
 from pettingzoo.utils.conversions import parallel_wrapper_fn
 
 
@@ -43,7 +42,7 @@ class raw_env(AECEnv):
 
     def reinit(self):
         self.agents = self.possible_agents[:]
-        self._agent_selector = agent_selector(self.agents)
+        self._agent_selector = agent_selector.agent_selector(self.agents)
         self.agent_selection = self._agent_selector.next()
         self.rewards = {agent: 0 for agent in self.agents}
         self._cumulative_rewards = {agent: 0 for agent in self.agents}
@@ -175,4 +174,4 @@ def env(**kwargs):
     return env
 
 
-parallel_env = parallel_wrapper_fn(env)
+pd_env = parallel_wrapper_fn(env)
